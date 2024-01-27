@@ -123,18 +123,10 @@ fi
 #SELECT MAP SIZE
 ###############
 
-if [ "$MAPSIZE" = "tiny" ]; then
-MPSIZE="1000"
-elif [ "$MAPSIZE" = "small" ]; then
-MPSIZE="2000"
-elif [ "$MAPSIZE" = "medium" ]; then
-MPSIZE="3500"
-elif [ "$MAPSIZE" = "large" ]; then
-MPSIZE="6000"
-elif [ "$MAPSIZE" = "massive" ]; then
-MPSIZE="8000"
+if [ "$MAPSIZE" != "" ]; then
+MPSIZE=$MAPSIZE
 else
-echo "Error: Please select map size"
+echo "Error: Please enter a map size"
 exit
 fi
 
